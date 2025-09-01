@@ -2,14 +2,14 @@
 
 ## Tasks
 
-- [ ] 1. Replace mock data with real database integration for property management
-  - [ ] 1.1 Write tests for database connection and property queries
-  - [ ] 1.2 Create database service layer with connection management
-  - [ ] 1.3 Implement property CRUD operations with Drizzle ORM
-  - [ ] 1.4 Update API routes to use database instead of mock data
-  - [ ] 1.5 Add error handling and validation for database operations
-  - [ ] 1.6 Test multi-tenant data isolation with RLS policies
-  - [ ] 1.7 Verify all tests pass and API endpoints work with real data
+- [x] 1. Replace mock data with real database integration for property management
+  - [x] 1.1 Write tests for database connection and property queries
+  - [x] 1.2 Create database service layer with connection management
+  - [x] 1.3 Implement property CRUD operations with Drizzle ORM
+  - [x] 1.4 Update API routes to use database instead of mock data
+  - [x] 1.5 Add error handling and validation for database operations
+  - [x] 1.6 Test multi-tenant data isolation with RLS policies
+  - [x] 1.7 Verify all tests pass and API endpoints work with real data
 
 - [ ] 2. Implement contact management database integration
   - [ ] 2.1 Write tests for contact CRUD operations
