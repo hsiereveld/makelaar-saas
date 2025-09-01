@@ -1,0 +1,5 @@
+# Product Mission (Lite)
+
+Makelaar CRM SaaS is an API-first multi-tenant CRM platform that helps Dutch, English, and Belgian real estate professionals operating in Spain manage international property transactions, leads, and cross-border client relationships by providing powerful backend automation while preserving their existing website and brand identity.
+
+Makelaar CRM serves Northern European real estate agents and agencies specializing in Spanish properties for international buyers who need multilingual CRM capabilities (Dutch, English, French, Spanish) without abandoning their existing websites or paying enterprise prices. Unlike traditional real estate software designed for domestic markets, we provide a headless CRM that integrates with existing multilingual WordPress sites through APIs, while offering true multi-tenant architecture with pan-European features like multi-currency support (EUR/GBP), international transaction workflows, and multi-jurisdiction compliance management.

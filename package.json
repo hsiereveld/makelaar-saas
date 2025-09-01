@@ -1,27 +1,46 @@
 {
   "name": "makelaar-saas",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "db:push": "dotenv -e .env.local drizzle-kit push",
+    "db:studio": "dotenv -e .env.local drizzle-kit studio",
+    "db:generate": "dotenv -e .env.local drizzle-kit generate"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "@neondatabase/serverless": "latest",
+    "@radix-ui/react-dialog": "latest",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@tanstack/react-query": "latest",
+    "@tanstack/react-table": "latest",
+    "@vercel/blob": "latest",
+    "better-auth": "latest",
+    "clsx": "latest",
+    "date-fns": "latest",
+    "drizzle-orm": "latest",
+    "lucide-react": "latest",
+    "next": "15.0.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "recharts": "latest",
+    "resend": "latest",
+    "stripe": "latest",
+    "tailwind-merge": "latest",
+    "zustand": "latest"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "dotenv-cli": "^10.0.0",
+    "drizzle-kit": "latest",
+    "eslint": "^9.34.0",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "^5"
   }
 }
