@@ -1,0 +1,3 @@
+# Spec Summary (Lite)
+
+Implement comprehensive agency administration dashboard enabling Nederlandse real estate agency owners to manage complete makelaarspraktijk including property portfolios, client relationships, team collaboration, business workflows, document management, and communication systems within tenant isolation. System provides full operational control optimized for international real estate transactions between Northern Europe and Spain with role-based team management and business intelligence.

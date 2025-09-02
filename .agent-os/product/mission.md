@@ -2,7 +2,7 @@
 
 ## Pitch
 
-Makelaar CRM SaaS is an API-first multi-tenant CRM platform that helps Dutch, English, and Belgian real estate professionals operating in Spain manage international property transactions, leads, and cross-border client relationships by providing powerful backend automation while preserving their existing website and brand identity.
+Makelaar CRM SaaS is a complete multi-tenant CRM application that helps Dutch, English, and Belgian real estate professionals operating in Spain manage international property transactions, leads, and cross-border client relationships through a comprehensive web platform that serves all parties in the real estate process.
 
 ## Users
 
@@ -38,7 +38,7 @@ Makelaar CRM SaaS is an API-first multi-tenant CRM platform that helps Dutch, En
 
 Northern European real estate professionals operating in Spain juggle 8-12 disconnected tools: multilingual websites (WordPress/custom in Dutch, English, French), Spanish portals (Idealista, Fotocasa), home market reference channels (Funda, Rightmove, Immoweb), multiple currency conversion tools (EUR/GBP rates), international payment systems, Spanish legal document management, regulatory compliance tools for four different countries, and manual spreadsheets for complex cross-border transactions. This fragmentation leads to 60% of international leads being lost due to multi-language barriers and complex handoff processes across four markets, with agents spending 5-6 hours daily on administrative coordination instead of serving clients.
 
-**Our Solution:** One unified API-first CRM with native support for Dutch, English, French, and Spanish languages, multi-currency handling (EUR/GBP), and automated international transaction workflows across all four target markets.
+**Our Solution:** One unified CRM application with comprehensive frontend interfaces for all parties, native support for Dutch, English, French, and Spanish languages, multi-currency handling (EUR/GBP), and automated international transaction workflows across all four target markets.
 
 ### No International Real Estate CRM Solutions
 
@@ -56,7 +56,7 @@ Pan-European property sales involve Spanish notarios, Dutch/British/Belgian mort
 
 ### Website Preservation & API Integration
 
-Unlike traditional real estate CRM solutions that require full platform adoption, we provide a headless CRM that integrates with existing WordPress sites, custom websites, or any frontend. This means agents keep their brand, SEO rankings, and customer experience while upgrading their backend capabilities.
+Unlike traditional real estate CRM solutions that are single-tenant or require expensive enterprise licenses, we provide a complete multi-tenant CRM application that serves all parties in the real estate transaction process. Makeleaars use the platform to manage their business operations, while buyers, sellers, and other parties use the platform's frontend to execute their roles in property transactions. Makeleaars maintain their separate marketing websites for property showcase and SEO, while using this platform for all business process management.
 
 ### True Multi-Tenant Architecture
 

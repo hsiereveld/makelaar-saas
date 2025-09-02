@@ -1,0 +1,3 @@
+# Spec Summary (Lite)
+
+Implement comprehensive SaaS platform management dashboard enabling super-admins to manage all real estate agencies with complete subscription/billing oversight, usage analytics, support operations, and role-based SaaS team collaboration. System provides full operational control over Nederlandse real estate SaaS platform with executive-level business intelligence and financial management capabilities.

@@ -1,2 +1,5 @@
 export * from './property.service'
 export * from './tenant.service'
+export * from './contact.service'
+export * from './auth.service'
+export * from './workflow.service'
