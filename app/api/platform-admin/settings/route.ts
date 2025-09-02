@@ -24,7 +24,7 @@ export const GET = createPlatformAdminHandler(async (request, context) => {
 })
 
 // PUT /api/platform-admin/settings - Update a platform setting
-export const PUT = createPlatformAdminHandler(async (request, context) => {
+export const PUT = createPlatformAdminHandler(async (request, context): Promise<any> => {
   try {
     const body = await request.json()
     const { id, key, value, category, isPublic } = body
@@ -59,8 +59,7 @@ export const PUT = createPlatformAdminHandler(async (request, context) => {
 
     return NextResponse.json({
       success: true,
-      data: updated[0],
-      message: `Setting "${key}" successfully updated`
+      data: updated[0]
     })
   } catch (error) {
     console.error('Error updating platform setting:', error)
@@ -72,7 +71,7 @@ export const PUT = createPlatformAdminHandler(async (request, context) => {
 })
 
 // POST /api/platform-admin/settings - Create a new platform setting
-export const POST = createPlatformAdminHandler(async (request, context) => {
+export const POST = createPlatformAdminHandler(async (request, context): Promise<any> => {
   try {
     const body = await request.json()
     const { key, value, description, category, isPublic } = body
@@ -99,8 +98,7 @@ export const POST = createPlatformAdminHandler(async (request, context) => {
 
     return NextResponse.json({
       success: true,
-      data: newSetting[0],
-      message: `Setting "${key}" successfully created`
+      data: newSetting[0]
     })
   } catch (error) {
     console.error('Error creating platform setting:', error)
