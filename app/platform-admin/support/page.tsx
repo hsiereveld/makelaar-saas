@@ -14,6 +14,7 @@ import { LoadingButton } from '@/components/ui/loading-button'
 import { toast } from '@/components/ui/toast'
 import { useURLFilters, FilterTags } from '@/components/ui/url-filters'
 import { SupportTicketModal } from '@/components/platform-admin/SupportTicketModal'
+import { Suspense } from 'react'
 import { 
   Ticket, 
   Search, 
@@ -48,6 +49,14 @@ interface SupportTicket {
 }
 
 export default function SupportTicketsManagement() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SupportTicketsContent />
+    </Suspense>
+  )
+}
+
+function SupportTicketsContent() {
   const [tickets, setTickets] = useState<SupportTicket[]>([
     {
       id: '1',
