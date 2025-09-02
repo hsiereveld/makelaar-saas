@@ -1,103 +1,319 @@
-import Image from "next/image";
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Building2, Users, Shield, TrendingUp, ArrowRight, CheckCircle, Globe2, Building } from 'lucide-react'
+import Link from 'next/link'
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white">
+      {/* Professional Nederlandse Header */}
+      <header className="border-b border-neutral-200 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container-business">
+          <div className="flex items-center justify-between py-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-primary-50 rounded-lg">
+                <Building2 className="h-7 w-7 text-primary-600" />
+              </div>
+              <div>
+                <span className="text-xl font-semibold text-neutral-900">Casa CRM</span>
+                <div className="text-sm text-neutral-500 font-medium">Professional Real Estate Platform</div>
+              </div>
+            </div>
+            <nav className="flex items-center gap-6">
+              <Link href="/auth/login" className="text-neutral-600 hover:text-neutral-900 font-medium transition-colors">
+                Inloggen
+              </Link>
+              <Link href="/auth/register">
+                <Button variant="business" size="default">
+                  Gratis Proberen
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </nav>
+          </div>
         </div>
+      </header>
+
+      {/* Professional Nederlandse Hero Section */}
+      <main className="section-business">
+        <div className="container-business">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
+              <Shield className="h-4 w-4" />
+              Professionele Multi-Tenant CRM Platform
+            </div>
+            
+            <h1 className="text-business-title text-5xl md:text-6xl mb-6">
+              Complete CRM voor <br />
+              <span className="text-primary-600">Internationale Makelaardij</span>
+            </h1>
+            
+            <p className="text-business-subtitle max-w-3xl mx-auto mb-12">
+              Specialist platform voor Nederlandse, Engelse en Belgische makelaars die actief zijn in Spanje. 
+              Beheer panden, contacten en transacties met professionele interfaces voor alle partijen.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+              <Link href="/auth/register">
+                <Button variant="business" size="xl">
+                  Start 14 Dagen Gratis
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/auth/login">
+                <Button variant="outline" size="lg">
+                  Bestaande Gebruiker
+                </Button>
+              </Link>
+            </div>
+            
+            {/* Nederlandse Business Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-neutral-600">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-success-500" />
+                <span>GDPR Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-success-500" />
+                <span>Multi-Tenant Beveiliging</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-success-500" />
+                <span>Nederlandse Hosting</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-success-500" />
+                <span>24/7 Ondersteuning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Nederlandse Business Feature Section */}
+        <section className="section-business bg-neutral-50">
+          <div className="container-business">
+            <div className="text-center mb-16">
+              <h2 className="text-business-title mb-4">
+                Alles wat je nodig hebt voor professionele makelaardij
+              </h2>
+              <p className="text-business-body max-w-2xl mx-auto">
+                Van pandbeheer tot klantrelaties - één platform voor al je zakelijke processen
+              </p>
+            </div>
+            
+            <div className="grid-business-cards">
+              <Card variant="business" elevation="medium">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-3 bg-primary-50 rounded-lg">
+                      <Building2 className="h-6 w-6 text-primary-600" />
+                    </div>
+                    <CardTitle>Pand Management</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Complete levenscyclus van panden met Nederlandse workflow processen, 
+                    statusbeheer en geautomatiseerde notificaties voor alle betrokkenen
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-sm text-neutral-600">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Volledige pand CRUD met workflow validatie</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Status overgangen (concept → actief → verkocht)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Contact-pand relatie tracking</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Geautomatiseerde workflow triggers</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card variant="business" elevation="medium">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-3 bg-success-50 rounded-lg">
+                      <Users className="h-6 w-6 text-success-600" />
+                    </div>
+                    <CardTitle>Contact & Lead Beheer</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Uitgebreid contactbeheer met Nederlandse business patronen voor 
+                    kopers, verkopers en internationale klantrelaties
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-sm text-neutral-600">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Contact CRUD voor kopers/verkopers</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Lead capture met bron tracking</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Geautomatiseerde lead scoring</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Bulk import/export functionaliteit</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card variant="business" elevation="medium">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-3 bg-warning-50 rounded-lg">
+                      <Globe2 className="h-6 w-6 text-warning-600" />
+                    </div>
+                    <CardTitle>Internationale Architectuur</CardTitle>
+                  </div>
+                  <CardDescription>
+                    Complete tenant isolatie met aangepaste branding, 
+                    functie beheer en rol-gebaseerde toegangscontrole
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-sm text-neutral-600">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Volledig authenticatiesysteem</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Rol-gebaseerde permissies</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Aangepaste tenant branding</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-success-500 shrink-0" />
+                      <span>Feature flag management</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Nederlandse Business CTA Section */}
+        <section className="section-business">
+          <div className="container-business">
+            <Card variant="executive" elevation="prominent" className="overflow-hidden">
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-12 text-center">
+                <h2 className="text-business-title mb-4">
+                  Klaar om je Makelaarspraktijk te Moderniseren?
+                </h2>
+                <p className="text-business-subtitle mb-12 max-w-2xl mx-auto">
+                  Sluit je aan bij honderden makelaars die hun internationale vastgoedtransacties 
+                  beheren met onze professionele CRM platform
+                </p>
+                
+                {/* Nederlandse Business Metrics */}
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg border border-white/50">
+                    <div className="text-4xl font-bold text-primary-700 mb-2">320+</div>
+                    <div className="text-business-caption">Uitgebreide Tests</div>
+                    <div className="text-xs text-neutral-500 mt-1">Kwaliteit Gegarandeerd</div>
+                  </div>
+                  <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg border border-white/50">
+                    <div className="text-4xl font-bold text-success-600 mb-2">25+</div>
+                    <div className="text-business-caption">API Eindpunten</div>
+                    <div className="text-xs text-neutral-500 mt-1">Volledige Integratie</div>
+                  </div>
+                  <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg border border-white/50">
+                    <div className="text-4xl font-bold text-warning-600 mb-2">100%</div>
+                    <div className="text-business-caption">Tenant Isolatie</div>
+                    <div className="text-xs text-neutral-500 mt-1">Veilig & Betrouwbaar</div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <Link href="/auth/register">
+                    <Button variant="business" size="xl">
+                      Start 14 Dagen Gratis
+                      <ArrowRight className="h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <Link href="/auth/login">
+                    <Button variant="outline" size="lg">
+                      Demo Bekijken
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Professional Nederlandse Footer */}
+      <footer className="border-t border-neutral-200 bg-white">
+        <div className="container-business">
+          <div className="py-12">
+            <div className="grid md:grid-cols-4 gap-8 mb-8">
+              <div className="col-span-2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-primary-50 rounded-lg">
+                    <Building2 className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <div>
+                    <span className="text-lg font-semibold text-neutral-900">Casa CRM</span>
+                    <div className="text-sm text-neutral-500">Professional Real Estate Platform</div>
+                  </div>
+                </div>
+                <p className="text-business-body max-w-md">
+                  De professionele CRM oplossing voor Nederlandse, Engelse en Belgische 
+                  makelaars die actief zijn in de Spaanse vastgoedmarkt.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="font-semibold text-neutral-900 mb-4">Platform</h3>
+                <ul className="space-y-2 text-sm text-neutral-600">
+                  <li><Link href="/auth/register" className="hover:text-primary-600">Gratis Proberen</Link></li>
+                  <li><Link href="/auth/login" className="hover:text-primary-600">Inloggen</Link></li>
+                  <li><Link href="/platform-admin" className="hover:text-primary-600">Platform Admin</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="font-semibold text-neutral-900 mb-4">Ondersteuning</h3>
+                <ul className="space-y-2 text-sm text-neutral-600">
+                  <li><a href="mailto:support@makelaarcrm.nl" className="hover:text-primary-600">support@makelaarcrm.nl</a></li>
+                  <li><a href="tel:+31208001234" className="hover:text-primary-600">+31 20 800 1234</a></li>
+                  <li className="text-xs text-neutral-500 mt-2">Nederlandse Ondersteuning</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="border-t border-neutral-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-neutral-500">
+                © 2025 Casa CRM. Professioneel multi-tenant vastgoed management platform.
+              </p>
+              <div className="flex items-center gap-6 text-sm text-neutral-500">
+                <span>Privacy Beleid</span>
+                <span>Algemene Voorwaarden</span>
+                <span>GDPR Compliant</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
